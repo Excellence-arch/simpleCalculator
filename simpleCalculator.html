@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="bootstrap-4.6.0-dist/css/bootstrap.css">
+    <link rel="stylesheet" href="bootstrap-4.6.0-dist/js/bootstrap.js">
+
+    <script>
+        function operation(val) {
+            display.value += val;
+        }
+
+        function c() {
+            display.value = ""
+        }
+
+        function numEquals() {
+            var x = display.value;
+            var y = eval(x);
+            display.value == y;
+        }
+    </script>
+</head>
+<body>
+    <center>
+        <section class="border container mt-5 bg-success">
+            <h3 align="center">Calculator</h3>
+            <input type="text" class="bg-secondary text-white" disabled id="display">
+            <div class="d-flex mt-2">
+                <button class="btn btn-warning" onclick="operation(1)">1</button>
+                <button class="btn btn-warning" onclick="operation(2)">2</button>
+                <button class="btn btn-warning" onclick="operation(3)">3</button>
+                <button class="btn btn-warning" onclick="operation('+')">+</button>
+            </div>
+            <div class="d-flex">
+                <button class="btn btn-warning " onclick="operation(4)">4</button>
+                <button class="btn btn-warning" onclick="operation(5)">5</button>
+                <button class="btn btn-warning" onclick="operation(6)">6</button>
+                <button class="btn btn-warning" onclick="operation('-')">-</button>
+            </div>
+            <div class="d-flex">
+                <button class="btn btn-warning" onclick="operation(7)" id="seven">7</button>
+                <button onclick="operation(8)" class="btn btn-warning">8</button>
+                <button onclick="operation(9)" class="btn btn-warning">9</button>
+                <button onclick="operation('*')" class="btn btn-warning">*</button>
+            </div>
+            <div class="d-flex">
+                <button class="btn btn-warning" onclick="c()">C</button>
+                <button onclick="operation(0)" class="btn btn-warning">0</button>
+                <button onclick="operation('/')" class="btn btn-warning">/</button>
+                <button class="btn btn-warning" onclick="numEquals()">=</button>
+            </div>
+        </section>
+    </center>
+</body>
+
+<style>
+    button {
+        width: 50px;
+        height: 50px;
+        margin: 1px;
+        box-shadow: 5px 5px 5px;
+    }
+
+    section.container {
+        width: 250px;
+        box-shadow: 10px 10px 5px;
+        padding: 20px;
+    }
+
+    input {
+        margin: 0;
+        width: 205px;
+        margin-left: -1px;
+    }
+</style>
+</html>
